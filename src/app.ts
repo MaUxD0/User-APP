@@ -11,7 +11,7 @@ const apiRouter = Router();
 app.use("/api", apiRouter);
 
 const userRouter = new UserRouter();
-apiRouter.use("/users", userRouter.router);
+apiRouter.use( userRouter.router);
 
 if(NODE_ENV !== 'production') {
 app.listen(PORT, () => {
